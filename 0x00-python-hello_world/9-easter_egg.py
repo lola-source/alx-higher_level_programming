@@ -1,2 +1,2 @@
-#1/usr/bin/python3
-import this
+#!/bin/bash
+python3 $PYFILE
