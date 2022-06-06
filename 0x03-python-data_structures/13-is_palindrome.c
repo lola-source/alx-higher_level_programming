@@ -1,50 +1,44 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "lists.h"
 /**
-* list_len - finds no. of elements ina linked list.
-* @h: pointer to linked list.
-* Return: number of elements in linked list.
-*/
-size_t list_len(listint_t *h)
-{
-	size_t  nodes = 0;
+ * palindrome_rec - Iterates through a list recursively
+ *@head: head of the list
+ *@tail: iterates to the end of the list
+ *
+ *Return: 1 if a palindrome, 0 if not a palindrome
+ */
 
-	if (h == NULL)
-		return (0);
-	while (h != NULL)
+int palindrome_rec(listint_t **head, listint_t *tail)
+{
+	if (tail == NULL)
+		return (1);
+
+	if (palindrome_rec(head, tail->next) == 1 && (*head)->n == tail->n)
 	{
-		nodes++;
-		h = h->next;
+		(*head) = (*head)->next;
+		return (1);
+
 	}
-	return (nodes);
+	else
+		return (0);
 }
+
 /**
-* is_palindrome - checks if a singly linked list is a palindrome.
-* @head: double pointert to head of d-list.
-* Return: 1 if palindrome, 0 otherwise.
-*/
+ *is_palindrome - checks if linked list is a palindrome
+ *@head: head of the list
+ *
+ *Return: 1 if a  palindrome, 0 if not a palindrome
+ */
+
 int is_palindrome(listint_t **head)
 {
-	int *nArr, i = 0, j = 0, len = 0;
-
-	listint_t *temp;
 	if (*head == NULL)
 		return (1);
-	temp = *head;
-	len = list_len(temp);
-	nArr = (int *)malloc(sizeof(int) * len);
-	if (nArr == NULL)
-		return (2);
-	temp = *head;
-	while (temp != NULL)
-	{
-		nArr[j] = temp->n;
-		j++;
-		temp = temp->next;
-	}
-	for (i = 0, j = len - 1; i < j; i++, j--)
-	{
-		if (nArr[i] != nArr[j])
-			return (0);
-	}
-	return (1);
+
+	if ((*head)->next == NULL)
+		return (1);
+
+	return (palindrome_rec(head, *head));
+
 }
