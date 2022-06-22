@@ -1,16 +1,11 @@
 #!/usr/bin/python3
-
 """Class for Node"""
-
-
-
 class Node:
     """ defines a node of a singly linked list
         Attributes:
             data (int): data
             next_node (Node, optional): node
     """
-
     def __init__(self, data, next_node=None):
         """Initialize Node
         args:
@@ -19,7 +14,6 @@ class Node:
         """
         self.data = data
         self.next_node = next_node
-
     @property
     def data(self):
         """data getter
