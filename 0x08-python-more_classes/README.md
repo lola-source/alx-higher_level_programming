@@ -1,6 +1,6 @@
-#0x08. Python - More Classes and Object
+# 0x08. Python - More Classes and Object
 
-````
+
 **[0-rectangle.py](./0-rectangle.py)** Write an empty class Rectangle that defines a rectangle:
 	* You are not allowed to import any module
 
