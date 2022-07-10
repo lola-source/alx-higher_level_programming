@@ -48,7 +48,7 @@ class Square(Rectangle):
             else:
                 for k, v in kwargs.items():
                     if hasattr(self, k)
-                       setattr(self, k, v)
+                        setattr(self, k, v)
 
     def to_dictionary(self):
         """Converts to dictionary"""
