@@ -7,6 +7,7 @@ from models.square import Square
 import io
 from contextlib import redirect_stdout
 
+
 class TestRectangleClass_dict(unittest.TestCase):
     """Test Square"""
 

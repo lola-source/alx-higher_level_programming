@@ -208,9 +208,7 @@ class TestSquareClass_size(unittest.TestCase):
             Square(10, 2)
         except err as e:
             self.assertEqual((str(e)), "x" + msg)
-        try: 
+        try:
             Square(10, 2, -3)
         except err as e:
             self.assertEqual((str(e)), "y" + msg)
-
-

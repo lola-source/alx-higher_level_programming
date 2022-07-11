@@ -7,6 +7,7 @@ from models.square import Square
 import io
 from contextlib import redirect_stdout
 
+
 class TestSquareClass_dict(unittest.TestCase):
     """Test Square"""
 
@@ -26,4 +27,4 @@ class TestSquareClass_dict(unittest.TestCase):
         """Test exceptions"""
         s1 = Square(10, 2, 1)
         with self.assertRaises(TypeError):
-        s1_dictionary = s1.to_dictionary(323232)
+            s1_dictionary = s1.to_dictionary(323232)

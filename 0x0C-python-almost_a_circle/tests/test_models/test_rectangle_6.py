@@ -44,4 +44,3 @@ class TestRectangleClass_Str(unittest.TestCase):
         with redirect_stdout(f):
             print(r77, end="")
         self.assertEqual(f.getvalue(), s)
-

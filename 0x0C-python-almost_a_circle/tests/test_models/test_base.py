@@ -6,7 +6,7 @@ from models.base import Base
 
 class TestBase(unittest.TestCase):
     """Tests the base model"""
-    
+
     def test_valid_id(self):
         """Tests for a valid id"""
         b1 = Base()

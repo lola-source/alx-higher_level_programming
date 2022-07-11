@@ -9,7 +9,7 @@ from contextlib import redirect_stdout
 
 class TestRectangleClass_Update(unittest.TestCase):
     """Test cases for rectangle, task 8"""
-    
+
     def tearDown(self):
         """Teardown"""
         Base.reset()
@@ -76,6 +76,7 @@ class TestRectangleClass_Update(unittest.TestCase):
             r1.update(21, 32, 43, 43, s)
         except err as e:
             self.assertEqual((str(e)), "y" + msg)
+
     def test_args_valid_types_set(self):
         """Check valid types, set"""
         Base.reset()
@@ -84,7 +85,7 @@ class TestRectangleClass_Update(unittest.TestCase):
         msg = " must be an integer"
         err = TypeError
         try:
-           r1.update(21, s)
+               r1.update(21, s)
         except err as e:
             self.assertEqual((str(e)), "width" + msg)
         try:
@@ -187,22 +188,22 @@ class TestRectangleClass_Update(unittest.TestCase):
             r1.update(21, 32, s)
         except err as e:
             self.assertEqual(e)), "height" + msg)
-        try:
-            r1.update(21, 32, 43, s)
-        except err as e:
-            self.assertEqual((str(e)), "x" + msg)
-        try:
-            r1.update(21, 32, 43, 43, s)
-        except err as e:
-            self.assertEqual((str(e)), "y" + msg)
+            try:
+                r1.update(21, 32, 43, s)
+            except err as e:
+                self.assertEqual((str(e)), "x" + msg)
+            try:
+                r1.update(21, 32, 43, 43, s)
+            except err as e:
+                self.assertEqual((str(e)), "y" + msg)
 
     def test_args_value_zero(self):
         """Check valid value"""
         Base.reset()
-        r1 = Rectangle(10, 10, 10, 10)
-        s = 0
-        msg = " must be > 0"
-        err = ValueError
+        r1= Rectangle(10, 10, 10, 10)
+        s= 0
+        msg= "must be > 0"
+        err= ValueError
         try:
             r1.update(21, s)
         except err as e:
@@ -212,7 +213,7 @@ class TestRectangleClass_Update(unittest.TestCase):
         except err as e:
             self.assertEqual((str(e)), "height" + msg)
         s = -1
-        msg = " must be >= 0"
+        msg = "must be >= 0"
         try:
             r1.update(21, 32, 43, s)
         except err as e:
@@ -221,5 +222,3 @@ class TestRectangleClass_Update(unittest.TestCase):
             r1.update(21, 32, 43, 43, s)
         except err as e:
             self.assertEqual((str(e)), "y" + msg)
-
-

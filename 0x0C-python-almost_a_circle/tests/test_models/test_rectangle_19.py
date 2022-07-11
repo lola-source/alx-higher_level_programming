@@ -12,6 +12,7 @@ import json
 import os
 from contextlib import redirect_stdout
 
+
 class TestBaseClass_to_json(unittest.TestCase):
     """Test Base"""
 
@@ -84,7 +85,7 @@ class TestBaseClass_to_json(unittest.TestCase):
         list_squares_input = [s1, s2]
 
         Square.save_to_file(list_squares_input)
-    
+
         list_squares_output = Square.load_from_file()
         self.assertEqual(str(s1), str(list_squares_output[0]))
         self.assertEqual(str(s2), str(list_squares_output[1]))

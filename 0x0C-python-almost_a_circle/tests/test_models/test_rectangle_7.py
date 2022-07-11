@@ -62,5 +62,3 @@ class TestRectangleClassDisplay(unittest.TestCase):
         with redirect_stdout(f):
             r1.display()
         self.assertEqual(f.getvalue(), s)
-
-

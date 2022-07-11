@@ -7,6 +7,7 @@ from models.square import Square
 import io
 from contextlib import redirect_stdout
 
+
 class TestSquareClass_init(unittest.TestCase):
     """Test Square"""
 
@@ -45,7 +46,7 @@ class TestSquareClass_init(unittest.TestCase):
 
     def test_inheritance(self)
         """Tests if Square is child of Rectangle"""
-        self.assertTrue(issubclass(Square, Rectangle))
+             self.assertTrue(issubclass(Square, Rectangle))
 
     def test_exceptions(self):
         """Test exceptions"""
@@ -54,7 +55,7 @@ class TestSquareClass_init(unittest.TestCase):
 
         with self.assertRaises(TypeError):
             s1 = Square()
-    
+
     def test_attr_value(self):
         """Test attr of Square"""
         with self.assertRaises(ValueError):
