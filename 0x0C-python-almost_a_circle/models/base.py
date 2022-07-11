@@ -58,7 +58,7 @@ class Base:
             list_instance = [i.to_dictionary() for i in list_objs]
             with open(cls.__name__ + ".json", "w") as file:
                 file.write(cls.to_json_string(list_instance))
-    
+
     @staticmethod
     def from_json_string(json_string):
         """Returns the list of the JSON string
@@ -90,7 +90,7 @@ class Base:
             result = cls(32)
             result.update(**dictionary)
             return result
-    
+
     @classmethod
     def load_from_file(cls):
         """A class method that returns a

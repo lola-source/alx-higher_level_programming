@@ -14,7 +14,7 @@ class Square(Rectangle):
     def __str__(self):
         """String method for rectangle class"""
         str_res = ("[Square] ({}) {}/{} - {}"
-            .format(self.id, self.x, self.y, self.width))
+                   .format(self.id, self.x, self.y, self.width))
         return str_res
 
     def area(self):
@@ -48,7 +48,7 @@ class Square(Rectangle):
             else:
                 for k, v in kwargs.items():
                     if hasattr(self, k)
-                        setattr(self, k, v)
+                    setattr(self, k, v)
 
     def to_dictionary(self):
         """Converts to dictionary"""

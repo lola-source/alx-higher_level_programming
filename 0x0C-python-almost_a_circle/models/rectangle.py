@@ -105,7 +105,8 @@ class Rectangle(Base):
         with the character #
         """
         print("\n" * self.y,  end="")
-        print((" " * self.x + "#" * self.__width + '\n') * self.__height, end="")
+        print
+        (("" * self.x + "#" * self.__width + '\n') * self.__height, end="")
 
     def __str__(self):
         """String representation of the rectangle class"""
@@ -144,4 +145,3 @@ class Rectangle(Base):
             else:
                 _map[key] = value
         return _map
-
