@@ -27,14 +27,14 @@ OPTIONS, HEAD, PUT
 [4-header.sh](4-header.sh)
 ```
 0x10-python-network_0:$  ./4-header.sh 0.0.0.0:5000/route_5 ; echo ""
-Hello Holberton School!
+Hello School!
 0x10-python-network_0:$  
 ```
 [5-post_params.sh](5-post_params.sh)
 ```
 0x10-python-network_0:$  ./5-post_params.sh 0.0.0.0:5000/route_6 ; echo ""
 POST params:
-    email: hr@holbertonschool.com
+    email:test@gmail.com
     subject: I will always be here for PLD
 0x10-python-network_0:$ 
 ```
